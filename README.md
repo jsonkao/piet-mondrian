@@ -9,3 +9,7 @@ To run it, simply run the script and open the image with your favorite image vie
 ```sh
 $ make && open foo.ppm
 ```
+
+## Samples
+
+![foo](https://i.imgur.com/OxzneNv.png)
