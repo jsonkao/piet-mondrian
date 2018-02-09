@@ -7,5 +7,5 @@ Generates art styled after the Dutch painter Pieter Cornelis "Piet" Mondrian.
 To run it, simply run the script and open the image with your favorite image viewer.
 
 ```sh
-$ python mondrian.py && open foo.png
+$ make && open foo.ppm
 ```
