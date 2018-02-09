@@ -14,7 +14,7 @@ COLORS = {
 
 def random_color():
     random_num = random.randint(0, 10)
-    if random_num > 4:
+    if random_num > 5:
         if random_num > 8:
             return COLORS['blue']
         elif random_num > 6:
@@ -31,11 +31,13 @@ def fill_bounds(pixels, x0, y0, x1, y1):
     pixels[y0][x0] = '0 255 0'
     pixels[y1 - 1][x1 - 1] = '0 255 0'
 
+
 def draw_bounds(pixels, x0, y0, x1, y1, ornt, i):
     if (i == 4):
         return
     new_ornt = (ornt + 1) % 2
     i += 1
+
     if ornt == 0:
         q1 = (3 * x0 + x1) / 4
         q3 = (3 * x1 + x0) / 4
@@ -49,6 +51,7 @@ def draw_bounds(pixels, x0, y0, x1, y1, ornt, i):
         for y in xrange(y0, y1):
             for x in xrange(lineX - 4, lineX + 4):
                 pixels[y][x] = '0 0 0'
+
     if ornt == 1:
         q1 = (3 * y0 + y1) / 4
         q3 = (3 * y1 + y0) / 4
@@ -78,7 +81,4 @@ def main(filename):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 1:
-        print('Please add a filename argument.')
-    else:
-        main(sys.argv[1])
+    main('foo.ppm')
