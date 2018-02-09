@@ -1,2 +1,2 @@
 all:
-	python imagine_pixels.py
+	python mondrian.py
